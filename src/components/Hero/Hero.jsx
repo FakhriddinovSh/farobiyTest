@@ -4,7 +4,11 @@ import './hero.css';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+import { Modal } from '../Modal/Modal';
+import { useState } from 'react';
 export const Hero = () => {
+	const [orderModal, setOrderModal] = useState(false);
+
 	return (
 		<section className="hero">
 			<Swiper
@@ -25,9 +29,13 @@ export const Hero = () => {
 									omadingizni sinab ko’ring
 								</p>
 							</div>
-							<Link className="hero__link" to="/test">
+							<a
+								onClick={() => setOrderModal(true)}
+								className="hero__link"
+								href="#"
+							>
 								Testni boshlash
-							</Link>
+							</a>
 						</div>
 					</div>
 				</SwiperSlide>
@@ -44,9 +52,13 @@ export const Hero = () => {
 									omadingizni sinab ko’ring
 								</p>
 							</div>
-							<Link className="hero__link" to="/test">
+							<a
+								onClick={() => setOrderModal(true)}
+								className="hero__link"
+								href="#"
+							>
 								Testni boshlash
-							</Link>
+							</a>
 						</div>
 					</div>
 				</SwiperSlide>
@@ -63,13 +75,35 @@ export const Hero = () => {
 									omadingizni sinab ko’ring
 								</p>
 							</div>
-							<Link className="hero__link" to="/test">
+							<a
+								onClick={() => setOrderModal(true)}
+								className="hero__link"
+								href="#"
+							>
 								Testni boshlash
-							</Link>
+							</a>
 						</div>
 					</div>
 				</SwiperSlide>
 			</Swiper>
+
+			<Modal modal={orderModal} setModal={setOrderModal}>
+				<div className="modal-inner">
+					<button
+						className="modal-close"
+						onClick={() => setOrderModal(false)}
+					></button>
+
+					<div className="modal-content">
+						<Link className="btn btn-success my-4" to="/code">
+							ID orqali kirish
+						</Link>
+						<Link className="btn btn-success" to="/test">
+							Telefon raqam orqali kirish
+						</Link>
+					</div>
+				</div>
+			</Modal>
 		</section>
 	);
 };

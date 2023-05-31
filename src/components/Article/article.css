@@ -1,0 +1,56 @@
+.article {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.article-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+	padding-left: 30px;
+	padding-right: 20px;
+	background: #f6fcff;
+	border-radius: 20px;
+}
+
+.article-title-wrapper {
+	width: 490px;
+}
+
+.article-title {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 134%;
+	color: #3996f7;
+}
+
+.article-wrapper img {
+	width: 50%;
+}
+
+@media screen and (max-width: 931px) {
+	.article-title {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 725px) {
+	.article-wrapper {
+		text-align: center;
+		flex-direction: column;
+	}
+
+	.article-wrapper img {
+		width: 100%;
+	}
+
+	.article-title-wrapper {
+		width: auto;
+		margin-bottom: 20px;
+	}
+
+	.article-title {
+		font-size: 12px;
+	}
+}

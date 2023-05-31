@@ -1,0 +1,138 @@
+.auth-main {
+	height: 100vh;
+	padding-top: calc(90px + 135px);
+	background-color: #f4f5f7;
+}
+
+.auth-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.auth-title-wrapper {
+	width: 528px;
+}
+
+.auth-title {
+	margin: 0;
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 46px;
+	line-height: 54px;
+	color: #3996f7;
+}
+
+.auth-desc {
+	margin: 0;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: -0.015em;
+	color: #5d6b8a;
+}
+
+.auth-form-wrapper {
+	width: 508px;
+	padding: 50px;
+	padding-top: 40px;
+	background: #ffffff;
+	border-radius: 20px;
+}
+
+.auth-form-title {
+	margin: 0;
+	margin-bottom: 6px;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 27px;
+	color: #3996f7;
+}
+
+.auth-form-desc {
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.01em;
+	color: #5d6b8a;
+}
+
+.auth-label {
+	margin-bottom: 8px;
+	font-size: 14px;
+	line-height: 14px;
+	letter-spacing: -0.01em;
+	color: #5d6b8a;
+}
+
+.auth-input {
+	width: 100%;
+	margin-bottom: 3px;
+	padding: 14px;
+	background: #ffffff;
+	border: 1px solid #eaedf6;
+	border-radius: 6px;
+}
+
+.auth-addition {
+	display: block;
+	margin-bottom: 23px;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: right;
+	color: #469dea;
+}
+
+.auth-button {
+	width: 100%;
+	padding: 15px 0;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	letter-spacing: -0.0075em;
+	color: #ffffff;
+	background: #3996f7;
+	border-radius: 32px;
+	border: transparent;
+}
+
+@media screen and (max-width: 1066px) {
+	.auth-main {
+		padding-top: 130px;
+		height: 100%;
+	}
+	.auth-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.auth-title-wrapper {
+		width: auto;
+		text-align: center;
+	}
+	.auth-title {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	.auth-desc {
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 28px;
+	}
+}
+
+@media screen and (max-width: 510px) {
+	.auth-form-wrapper {
+		width: auto;
+		padding: 20px;
+	}
+	.auth {
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 342px) {
+	.auth-form-title {
+		font-size: 20px;
+	}
+}
