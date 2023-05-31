@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import SiteLogo from '../../assets/images/icons/siteLogo.svg';
 
-export const Header = () => {
+export const Header = ({ lang, setLang }) => {
 	return (
 		<header className="site-header">
 			<nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -49,14 +49,28 @@ export const Header = () => {
 							</li>
 							<li className="site-header__item">
 								<form autoComplete="off">
-									<select name="user_language">
+									<span className="form-icon"></span>
+									<select
+										onChange={(e) => {
+											setLang(e.target.value);
+											window.localStorage.setItem(
+												'lang',
+												e.target.value,
+											);
+										}}
+										className="site-header__select"
+										name="user_language"
+									>
 										<option value="uz">Uz</option>
 										<option value="ru">Ru</option>
 									</select>
+									<span className="form-icon"></span>
 								</form>
 							</li>
 							<li className="site-header__item">
-								<Link to="/help">Yordam</Link>
+								<Link className="site-header__help" to="/help">
+									Yordam
+								</Link>
 							</li>
 						</ul>
 					</div>
