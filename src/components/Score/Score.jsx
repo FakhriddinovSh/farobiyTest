@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import './score.css';
+import { useState } from 'react';
+import { Modal } from '../Modal/Modal';
 
 export const Score = () => {
+	const [orderModal, setOrderModal] = useState(false);
+
 	return (
 		<section className="score">
 			<div className="container">
@@ -14,9 +18,13 @@ export const Score = () => {
 					Vaqt chegaralangan va testni qatyta topshirish imkoniyati
 					yo’q.
 				</p>
-				<Link className="score-link" to="/test">
+				<a
+					onClick={() => setOrderModal(true)}
+					className="score-link"
+					href="#"
+				>
 					Test topshirish
-				</Link>
+				</a>
 
 				<ul className="score-list row p-0 m-0 list-unstyled">
 					<li className="score-item col-xl-4">
@@ -43,6 +51,24 @@ export const Score = () => {
 						</p>
 					</li>
 				</ul>
+
+				<Modal modal={orderModal} setModal={setOrderModal}>
+					<div className="modal-inner">
+						<button
+							className="modal-close"
+							onClick={() => setOrderModal(false)}
+						></button>
+
+						<div className="modal-content">
+							<Link className="btn btn-success my-4" to="/code">
+								ID orqali kirish
+							</Link>
+							<Link className="btn btn-success" to="/test">
+								Telefon raqam orqali kirish
+							</Link>
+						</div>
+					</div>
+				</Modal>
 			</div>
 		</section>
 	);
