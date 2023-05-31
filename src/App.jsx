@@ -1,8 +1,10 @@
 import './app.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+import { Header } from './components/Header/Header';
 
 export const App = () => {
-	return <div>App</div>;
+	return (
+		<>
+			<Header />
+		</>
+	);
 };

@@ -1,0 +1,59 @@
+.navbar-collapse {
+	justify-content: flex-end;
+}
+
+.bg-body-tertiary {
+	background: #ffffff !important;
+	border-radius: 0px 0px 15px 15px;
+}
+
+.navbar {
+	padding: 15px 0 !important;
+}
+
+.site-header {
+	position: fixed;
+	width: 100%;
+}
+
+.site-header__link {
+	font-size: 14px;
+	line-height: 17px;
+	color: #5d6b8a;
+	text-decoration: none;
+}
+
+.site-header__item:not(:last-child) {
+	margin-right: 20px;
+}
+
+.site-header__item {
+	position: relative;
+}
+
+.site-header__item::before {
+	position: absolute;
+	left: -25px;
+	top: 5px;
+	width: 14px;
+	height: 18px;
+	background-image: url('../../assets/images/icons/callIcon.svg');
+	background-repeat: no-repeat;
+	content: '';
+}
+
+.site-header__item:first-child {
+	margin-right: 48px;
+}
+
+.site-header__item:nth-child(2)::before {
+	width: 20px;
+	left: -25px;
+	top: 7px;
+	background-image: url('../../assets/images/icons/mailIcon.svg');
+}
+
+.site-header__item:nth-child(3)::before,
+.site-header__item:last-child::before {
+	display: none;
+}
